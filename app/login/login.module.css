@@ -1,0 +1,117 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-background-dark);
+  padding: var(--space-6);
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--color-background-alt);
+  border-radius: var(--radius-xl);
+  padding: var(--space-10);
+  box-shadow: var(--shadow-xl);
+}
+
+.logo {
+  display: block;
+  margin: 0 auto var(--space-6);
+  height: 40px;
+  width: auto;
+  /* Logo is white/light — no invert needed on white card */
+}
+
+.title {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text-primary);
+  text-align: center;
+  margin-bottom: var(--space-1);
+}
+
+.subtitle {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.input:focus {
+  border-color: var(--color-accent);
+}
+
+.submit {
+  width: 100%;
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  background: var(--color-accent);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background var(--transition-base), transform var(--transition-base);
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--color-accent-hover);
+  transform: translateY(-1px);
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  font-size: var(--text-sm);
+  color: #e53e3e;
+  text-align: center;
+  padding: var(--space-3) var(--space-4);
+  background: rgba(229, 62, 62, 0.08);
+  border-radius: var(--radius-md);
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: var(--space-8) var(--space-6);
+  }
+}

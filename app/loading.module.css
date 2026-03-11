@@ -1,0 +1,30 @@
+.page {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  color: var(--color-text-secondary);
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-accent);
+  animation: spin 0.8s linear infinite;
+}
+
+.text {
+  font-size: var(--text-sm);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
